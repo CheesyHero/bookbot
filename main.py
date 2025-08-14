@@ -7,12 +7,10 @@ if len(sys.argv) != 2:
 else:
     fileLocation = sys.argv[1]
     from stats import get_num_words;
-    wordCount = get_num_words(fileLocation)
-# from stats import get_char_used
-# print(get_char_used())
+    wordCount = get_num_words(fileLocation) 
 
     print("============ BOOKBOT ============" + "\n" +
-      "Analyzing book found at books/frankenstein.txt..." + "\n" +
+      "Analyzing book found at " + fileLocation + "\n" +
       "----------- Word Count ----------" + "\n" + 
       "Found " + str(wordCount) + " total words" + "\n")
 
