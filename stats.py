@@ -1,18 +1,17 @@
 
 
-def get_num_words():
-    with open("/Users/guestuser/webflyx/bookbot/books/frankenstein.txt") as f:
+def get_num_words(location):
+    with open(location) as f:
     # do something with f (the file) here 
     # f is a file object
         file_contents = f.read()
 
-    file_split = len(file_contents.split(None));
-    resultString = str(file_split) + " words found in the document";
+    file_split = file_contents.split(None) 
 
-    return resultString;
+    return len(file_split)
     
-def get_char_used():
-    with open("/Users/guestuser/webflyx/bookbot/books/frankenstein.txt") as f:
+def get_char_used(location):
+    with open(location) as f:
     # do something with f (the file) here 
     # f is a file object
         file_contents = f.read()
@@ -29,3 +28,15 @@ def get_char_used():
             file_dictionary[s] = 1
 
     return file_dictionary;
+
+def print_sorted_dictionaries(my_dict):
+
+    sorted_dict_asc = dict(sorted(my_dict.items(), key=lambda item: item[1])) 
+
+    for key, value in my_dict.items(): 
+        k = str(key);
+        v = str(value);
+        s = k + ": " + v
+        print(s)
+
+        
