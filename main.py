@@ -3,6 +3,7 @@ import sys
 #fileLocation = "/Users/guestuser/webflyx/bookbot/books/frankenstein.txt";
 if len(sys.argv) != 2:
     print("Usage: python3 main.py <path_to_book>")
+    sys.exit(1)
 
 else:
     fileLocation = sys.argv[1]
