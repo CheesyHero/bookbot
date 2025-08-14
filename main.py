@@ -2,7 +2,7 @@
 import sys
 #fileLocation = "/Users/guestuser/webflyx/bookbot/books/frankenstein.txt";
 if len(sys.argv) != 2:
-    print("To use Bookbot: You must input the location of a .txt you wish to view.")
+    print("Usage: python3 main.py <path_to_book>")
 
 else:
     fileLocation = sys.argv[1]
